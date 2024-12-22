@@ -4,6 +4,8 @@
 `deduper.py` is a Python script designed to help manage and clean up duplicate media files in a directory. It scans through a specified directory, identifies folders containing multiple files, and prompts the user to select which file to keep while removing the others. This is particularly useful for cleaning up media libraries with redundant or duplicate files.
 
 ---
+![Header Illustration](https://i.imgur.com/p854mhy.png)
+---
 
 ## Features
 - Recursively scans a specified directory for files.
