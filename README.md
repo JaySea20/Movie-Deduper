@@ -10,6 +10,7 @@
 - Identifies folders containing multiple files.
 - Interactively prompts the user to choose which file to keep.
 - Deletes unselected files while retaining the chosen one.
+- Automatically ignores common metadata, subtitles, artwork, torrent files, and other non-media files during the deduplication process.
 
 ---
 
@@ -40,9 +41,20 @@ python3 deduper.py /home/user/media
 
 ### 3. Interactive Selection
 For each folder with multiple files, the script will:
-1. List all files in the folder.
+1. List all files in the folder, excluding ignored file types (e.g., `.srt`, `.nfo`, `.jpg`, `.torrent`).
 2. Prompt you to select the file to keep by entering the corresponding number.
 3. Delete the other files in the folder.
+
+---
+
+## Ignored File Types
+By default, the script ignores the following file types:
+- Subtitles: `.srt`, `.sub`, `.idx`
+- Metadata: `.nfo`, `.xml`, `.json`
+- Artwork: `.jpg`, `.png`, `.bmp`
+- Torrent files: `.torrent`
+
+You can modify the script to adjust which file types are ignored.
 
 ---
 
@@ -91,6 +103,7 @@ Keeping: Movie2-1080p.mp4
 ## Notes
 - Ensure you have backups of your files before running the script to prevent accidental data loss.
 - This script only works on local files and directories. For remote media libraries, consider syncing them locally first.
+- You can customize the ignored file types in the script to suit your specific needs.
 
 ---
 
